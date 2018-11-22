@@ -1,12 +1,12 @@
-mov=VideoReader('H:\Acer\cum4k.18.11.13.lily.rader.creamed.by.my.stepbro.mp4');
+mov=VideoReader('H:\Acer\stepbro.mp4');
 numberframes=mov.NumberOfFrames;
-result_path = 'H:\Acer\cum4k.18.11.13.lily.rader\';
+result_path = 'H:\Acer\rader\';
 if ~exist(result_path,'dir')
         mkdir(result_path);
 end
-for i = 1 : 999   %i´Ó1µ½145
-      Img=read(mov,i);    %¶ÁÈ¡µÚiÖ¡      
+for i = 1 : 999   %iä»1åˆ°145
+      Img=read(mov,i);    %è¯»å–ç¬¬iå¸§      
       Img=imresize(Img,2.25,'bilinear');
-      imwrite(Img,[result_path, 'img_',sprintf('%05d',i),'.jpg'])   %½«µÚiÖ¡Ğ´Èëµ½£¬"img_000i.png"Í¼Æ¬¡£
+      imwrite(Img,[result_path, 'img_',sprintf('%05d',i),'.jpg'])   %å°†ç¬¬iå¸§å†™å…¥åˆ°ï¼Œ"img_000i.png"å›¾ç‰‡ã€‚
       i = i + 5
-end  %½áÊø
+end  %ç»“æŸ
