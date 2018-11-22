@@ -1,0 +1,16 @@
+      %% 保存运行结果      
+    imshow(im,'border','tight');
+    boxes = [pos([2,1]) - target_sz([2,1])/2, target_sz([2,1])];
+    rectangle('Position',boxes,'EdgeColor','r','LineWidth',2);
+    text(10,10,['#' num2str(frame)],'FontSize',20,'Color','r');       
+    if ~exist(result_path,'dir')
+        mkdir(result_path);
+    end
+    imwrite(frame2im(getframe(gcf)),[result_path num2str(frame),'.jpg'],'jpg');
+
+                %保存运行结果
+            result_path='C:\Users\zhaox\Desktop\testing_scenes\testing_scenes\scene_01\result_of_MEEM\';
+            if ~exist(result_path,'dir')
+             mkdir(result_path);
+            end
+               imwrite(frame2im(getframe(gcf)),[result_path num2str(frame_id),'.jpg'],'jpg');
